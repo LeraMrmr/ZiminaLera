@@ -1,10 +1,15 @@
 ﻿<Properties StartupConfiguration="{9345D4A2-5417-4249-9DE2-35F95EA01B15}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+    <Files>
+      <File FileName="Program.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ZiminaLear" expanded="True">
-            <Node name="ZiminaLear" selected="True" />
+            <Node name="ZiminaLear" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
