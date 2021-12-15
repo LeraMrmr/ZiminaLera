@@ -2,8 +2,8 @@
 ## Содержание  
  [Введение](#introduction)  
  [1. Описание предметной области](#domainDescription)  
- [1.1. Проблематика](#problematic)
- [1.2. Цели и задачи](#goals)
+ [1.1. Проблематика](#problematic) 
+ [1.2. Цели и задачи](#goals) 
  [2. Сравнительный анализ существующих прогарммных решений](#existingSoftware)  
 
  <a name="introduction"/>
