@@ -11,6 +11,8 @@
 
  [3. Разработка системы](#development)
  
+ [3.1. Этап проектирования](#designing)
+ 
  
  <a name="introduction"/>
 
@@ -51,4 +53,7 @@
 
 <a name="development"/>
 
+### 3.1. Этап проектирования
 
+
+<a name="designing"/>
