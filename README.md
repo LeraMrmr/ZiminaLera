@@ -86,31 +86,30 @@
 ### 3.2. Этап реализации
 На основании ER диаграммы создаем классы для каждой сущности. Ниже представлен листинг класса заказчик.
 
-using System;
+        using System;
 
-namespace ZiminaLear.Domain
-{
-    public class Customer
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Phone { get; set; }
-        public string Address { get; set; }
-        public DateTime BirthDate { get; set; }
-
-        public Customer() {}
-
-        public Customer(int custId,string name,string phone, string address, DateTime birthDate)
+        namespace ZiminaLear.Domain
         {
-            Id = custId;
-            Name = name;
-            Phone = phone;
-            Address = address;
-            BirthDate = birthDate;
-        }
-    }
-}
+            public class Customer
+            {
+                public int Id { get; set; }
+                public string Name { get; set; }
+                public string Phone { get; set; }
+                public string Address { get; set; }
+                public DateTime BirthDate { get; set; }
 
+                public Customer() {}
+
+                public Customer(int custId,string name,string phone, string address, DateTime birthDate)
+                {
+                    Id = custId;
+                    Name = name;
+                    Phone = phone;
+                    Address = address;
+                    BirthDate = birthDate;
+                }
+            }
+        }
 
 <a name="realization"/>
 
