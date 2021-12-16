@@ -84,7 +84,7 @@
 <a name="designing"/>
 
 ### 3.2. Этап реализации
-На основании ER диаграммы создаем классы для каждой сущности. Ниже представлен листинг класса заказчик.
+На основании ER диаграммы создаем классы для каждой сущности. Ниже представлен Листинг 1 - класс заказчик.
 
         using System;
 
@@ -110,6 +110,33 @@
                 }
             }
         }
+
+Листинг 2 - класс дизайнер.
+
+     using System;
+
+     namespace ZiminaLear.Domain
+     {
+         public class Designer
+         {
+             public int Id { get; set; }
+             public string Name { get; set; }
+             public string Phone { get; set; }
+             public string Pay { get; set; }
+
+             public Designer() {}
+
+             public Designer(int desId, string name, string phone, string pay)
+             {
+                 Id = desId;
+                 Name = name;
+                 Phone = phone;
+                 Pay = pay;
+             }
+         }
+         }
+
+
 
 <a name="realization"/>
 
