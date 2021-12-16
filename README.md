@@ -60,8 +60,11 @@
 
 На основе use-case диаграммы происходит разработка диаграммы потока данных (Data Flow Diagram), на которой показаны потоки данных.(см. Рисунок 2 и Рисунок 3)
 ![Снимок экрана 2021-12-16 в 8 44 05](https://user-images.githubusercontent.com/91217659/146315091-1237edaa-7f30-4998-9d5f-a40a014b9933.png)
+
 Рисунок 2 - Data Flow Diagram
+
 ![Снимок экрана 2021-12-16 в 8 43 40](https://user-images.githubusercontent.com/91217659/146315147-1231d4f7-1c51-4035-9f42-4d91a617f029.png)
+
 Рисунок 3 - Data Flow Diagram
 
 
