@@ -67,6 +67,10 @@
 
 Рисунок 3 - Data Flow Diagram
 
+Далее создаем диаграмму Сущность-Связь (Entity-Relationship diagram)(см. Рисунок 4), где отображаются хранилища и связи между ними.
+![Снимок экрана 2021-12-16 в 8 48 07](https://user-images.githubusercontent.com/91217659/146315497-ed14a804-26bd-4cbc-80c9-c74f00c0bd96.png)
+
+Рисунок 4 - Entity-Relationship diagram
 
 <a name="designing"/>
 
