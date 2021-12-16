@@ -13,6 +13,8 @@
  
  [3.1. Этап проектирования](#designing)
  
+ [3.2. Этап реализации](#realization)
+ 
  
  <a name="introduction"/>
 
@@ -77,4 +79,8 @@
 
 <a name="designing"/>
 
+### 3.2. Этап реализации
+
+
+<a name="realization"/>
 
