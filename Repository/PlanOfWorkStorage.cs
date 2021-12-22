@@ -13,36 +13,22 @@ namespace ZiminaLear.Repository
             PlanOfWorks.Add(planOfWork.Id, planOfWork);
             return PlanOfWorks[planOfWork.Id];
         }
-         public PlanOfWork Read(PlanOfWork planOfWork)
+         public PlanOfWork Read(int planOfWorkId)
             {
-                return PlanOfWorks[planOfWork.Id];
+                return PlanOfWorks[planOfWorkId];
             }
 
-            public PlanOfWork Update(PlanOfWork planOfWork, PlanOfWork newPlanOfWork)
+            public PlanOfWork Update(int planOfWorkId, PlanOfWork newPlanOfWork)
             {
-                PlanOfWorks[planOfWork.Id] = newPlanOfWork;
-                return PlanOfWorks[planOfWork.Id];
+                PlanOfWorks[planOfWorkId] = newPlanOfWork;
+                return PlanOfWorks[planOfWorkId];
             }
 
-        internal PlanOfWork Read(int planId)
-        {
-            throw new NotImplementedException();
-        }
 
-        public bool Delete(PlanOfWork planOfWork)
+        public bool Delete(int planOfWorkId)
             {
-                return PlanOfWorks.Remove(planOfWork.Id);
+                return PlanOfWorks.Remove(planOfWorkId);
             }
-
-        internal PlanOfWork Update(int planId, PlanOfWork newPlanOfWork)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal bool Delete(int planId)
-        {
-            throw new NotImplementedException();
-        }
     }
 
    

@@ -19,21 +19,21 @@ namespace ZiminaLear.Controllers
             return Storage.customerStorage.Create(customer);
         }    
         [HttpGet]
-        public Customer Read(Customer customer)
+        public Customer Read(int customerId)
         {
-            return Storage.customerStorage.Read(customer.Id);
+            return Storage.customerStorage.Read(customerId);
         }
 
         [HttpPut]
-        public Customer Update(Customer customer, Customer newCustomer)
+        public Customer Update(int customerId, Customer newCustomer)
         {
-            return Storage.customerStorage.Update(customer.Id, newCustomer);
+            return Storage.customerStorage.Update(customerId, newCustomer);
         }
 
         [HttpDelete]
-        public bool Delete(Customer customer)
+        public bool Delete(int customerId)
         {
-            return Storage.customerStorage.Delete(customer.Id);
+            return Storage.customerStorage.Delete(customerId);
         }
     }
 }

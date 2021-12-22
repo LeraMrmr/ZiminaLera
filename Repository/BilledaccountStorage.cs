@@ -13,35 +13,23 @@ namespace ZiminaLear.Repository
             Billedaccounts.Add(billedaccount.Price, billedaccount);
             return Billedaccounts[billedaccount.Price];
         }
-         public Billedaccount Read(Billedaccount billedaccount)
+         public Billedaccount Read(string billedaccountPrice)
             {
-                return Billedaccounts[billedaccount.Price];
+                return Billedaccounts[billedaccountPrice];
             }
 
-            public Billedaccount Update(Billedaccount billedaccount, Billedaccount newBilledaccount)
+            public Billedaccount Update(string billedaccountPrice, Billedaccount newBilledaccount)
             {
-                Billedaccounts[billedaccount.Price] = newBilledaccount;
-                return Billedaccounts[billedaccount.Price];
+                Billedaccounts[billedaccountPrice] = newBilledaccount;
+                return Billedaccounts[billedaccountPrice];
             }
 
-        internal Billedaccount Read(string price)
-        {
-            throw new NotImplementedException();
-        }
 
-        public bool Delete(Billedaccount billedaccount)
+
+        public bool Delete(string billedaccountPrice)
             {
-                return Billedaccounts.Remove(billedaccount.Price);
+                return Billedaccounts.Remove(billedaccountPrice);
             }
 
-        internal Billedaccount Update(string price, Billedaccount newBilledaccount)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal bool Delete(string price)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -19,21 +19,21 @@ namespace ZiminaLear.Controllers
             return Storage.workerStorage.Create(worker);
         }    
         [HttpGet]
-        public Worker Read(Worker worker)
+        public Worker Read(int workerId)
         {
-            return Storage.workerStorage.Read(worker.Id);
+            return Storage.workerStorage.Read(workerId);
         }
 
         [HttpPut]
-        public Worker Update(Worker worker, Worker newWorker)
+        public Worker Update(int workerId, Worker newWorker)
         {
-            return Storage.workerStorage.Update(worker.Id, newWorker);
+            return Storage.workerStorage.Update(workerId, newWorker);
         }
 
         [HttpDelete]
-        public bool Delete(Worker worker)
+        public bool Delete(int workerId)
         {
-            return Storage.workerStorage.Delete(worker.Id);
+            return Storage.workerStorage.Delete(workerId);
         }
     }
 }

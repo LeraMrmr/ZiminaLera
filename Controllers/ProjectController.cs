@@ -19,21 +19,21 @@ namespace ZiminaLear.Controllers
             return Storage.projectStorage.Create(project);
         }    
         [HttpGet]
-        public Project Read(Project project)
+        public Project Read(int projectId)
         {
-            return Storage.projectStorage.Read(project.Id);
+            return Storage.projectStorage.Read(projectId);
         }
 
         [HttpPut]
-        public Project Update(Project project, Project newProject)
+        public Project Update(int projectId, Project newProject)
         {
-            return Storage.projectStorage.Update(project.Id, newProject);
+            return Storage.projectStorage.Update(projectId, newProject);
         }
 
         [HttpDelete]
-        public bool Delete(Project project)
+        public bool Delete(int projectId)
         {
-            return Storage.projectStorage.Delete(project.Id);
+            return Storage.projectStorage.Delete(projectId);
         }
     }
 }

@@ -13,35 +13,22 @@ namespace ZiminaLear.Repository
             Customers.Add(customer.Id, customer);
             return Customers[customer.Id];
         }
-         public Customer Read(Customer customer)
+         public Customer Read(int customerId)
             {
-                return Customers[customer.Id];
+                return Customers[customerId];
             }
 
-            public Customer Update(Customer customer, Customer newCustomer)
+            public Customer Update(int customerId, Customer newCustomer)
             {
-                Customers[customer.Id] = newCustomer;
-                return Customers[customer.Id];
+                Customers[customerId] = newCustomer;
+                return Customers[customerId];
             }
 
-        internal Customer Read(int custId)
-        {
-            throw new NotImplementedException();
-        }
 
-        public bool Delete(Customer customer)
+        public bool Delete(int customerId)
             {
-                return Customers.Remove(customer.Id);
+                return Customers.Remove(customerId);
             }
 
-        internal Customer Update(int custId, Customer newCustomer)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal bool Delete(int custId)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

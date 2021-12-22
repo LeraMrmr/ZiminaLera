@@ -19,21 +19,21 @@ namespace ZiminaLear.Controllers
             return Storage.foremanStorage.Create(foreman);
         }    
         [HttpGet]
-        public Foreman Read(Foreman foreman)
+        public Foreman Read(int foremanId)
         {
-            return Storage.foremanStorage.Read(foreman.Id);
+            return Storage.foremanStorage.Read(foremanId);
         }
 
         [HttpPut]
-        public Foreman Update(Foreman foreman, Foreman newForeman)
+        public Foreman Update(int foremanId, Foreman newForeman)
         {
-            return Storage.foremanStorage.Update(foreman.Id, newForeman);
+            return Storage.foremanStorage.Update(foremanId, newForeman);
         }
 
         [HttpDelete]
-        public bool Delete(Foreman foreman)
+        public bool Delete(int foremanId)
         {
-            return Storage.foremanStorage.Delete(foreman.Id);
+            return Storage.foremanStorage.Delete(foremanId);
         }
     }
 }

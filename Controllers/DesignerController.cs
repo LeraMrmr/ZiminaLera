@@ -19,21 +19,21 @@ namespace ZiminaLear.Controllers
             return Storage.designerStorage.Create(designer);
         }    
         [HttpGet]
-        public Designer Read(Designer designer)
+        public Designer Read(int designerId)
         {
-            return Storage.designerStorage.Read(designer.Id);
+            return Storage.designerStorage.Read(designerId);
         }
 
         [HttpPut]
-        public Designer Update(Designer designer, Designer newDesigner)
+        public Designer Update(int designerId, Designer newDesigner)
         {
-            return Storage.designerStorage.Update(designer.Id, newDesigner);
+            return Storage.designerStorage.Update(designerId, newDesigner);
         }
 
         [HttpDelete]
-        public bool Delete(Designer designer)
+        public bool Delete(int designerId)
         {
-            return Storage.designerStorage.Delete(designer.Id);
+            return Storage.designerStorage.Delete(designerId);
         }
     }
 }

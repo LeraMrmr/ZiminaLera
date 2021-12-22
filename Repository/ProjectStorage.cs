@@ -13,36 +13,23 @@ namespace ZiminaLear.Repository
             Projects.Add(project.Id, project);
             return Projects[project.Id];
         }
-         public Project Read(Project project)
+         public Project Read(int projectId)
             {
-                return Projects[project.Id];
+                return Projects[projectId];
             }
 
-            public Project Update(Project project, Project newProject)
+            public Project Update(int projectId, Project newProject)
             {
-                Projects[project.Id] = newProject;
-                return Projects[project.Id];
+                Projects[projectId] = newProject;
+                return Projects[projectId];
             }
 
-        internal Project Read(int projectId)
-        {
-            throw new NotImplementedException();
-        }
 
-        public bool Delete(Project project)
+        public bool Delete(int projectId)
             {
-                return Projects.Remove(project.Id);
+                return Projects.Remove(projectId);
             }
 
-        internal Project Update(int projectId, Project newProject)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal bool Delete(int projectId)
-        {
-            throw new NotImplementedException();
-        }
     }
 
    

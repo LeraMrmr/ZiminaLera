@@ -13,35 +13,23 @@ namespace ZiminaLear.Repository
             Foremans.Add(foreman.Id, foreman);
             return Foremans[foreman.Id];
         }
-         public Foreman Read(Foreman foreman)
+         public Foreman Read(int foremanId)
             {
-                return Foremans[foreman.Id];
+                return Foremans[foremanId];
             }
 
-            public Foreman Update(Foreman foreman, Foreman newForeman)
+            public Foreman Update(int foremanId, Foreman newForeman)
             {
-                Foremans[foreman.Id] = newForeman;
-                return Foremans[foreman.Id];
+                Foremans[foremanId] = newForeman;
+                return Foremans[foremanId];
             }
 
-        internal Foreman Read(int desId)
-        {
-            throw new NotImplementedException();
-        }
 
-        public bool Delete(Foreman foreman)
+        public bool Delete(int foremanId)
             {
-                return Foremans.Remove(foreman.Id);
+                return Foremans.Remove(foremanId);
             }
 
-        internal Foreman Update(int desId, Foreman newForeman)
-        {
-            throw new NotImplementedException();
-        }
 
-        internal bool Delete(int desId)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -13,36 +13,23 @@ namespace ZiminaLear.Repository
             Pays.Add(pay.Id, pay);
             return Pays[pay.Id];
         }
-         public Pay Read(Pay pay)
+         public Pay Read(int payId)
             {
-                return Pays[pay.Id];
+                return Pays[payId];
             }
 
-            public Pay Update(Pay pay, Pay newPay)
+            public Pay Update(int payId, Pay newPay)
             {
-                Pays[pay.Id] = newPay;
-                return Pays[pay.Id];
+                Pays[payId] = newPay;
+                return Pays[payId];
             }
 
-        internal Pay Read(int payId)
-        {
-            throw new NotImplementedException();
-        }
 
-        public bool Delete(Pay pay)
+        public bool Delete(int payId)
             {
-                return Pays.Remove(pay.Id);
+                return Pays.Remove(payId);
             }
 
-        internal Pay Update(int payId, Pay newPay)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal bool Delete(int payId)
-        {
-            throw new NotImplementedException();
-        }
     }
 
    

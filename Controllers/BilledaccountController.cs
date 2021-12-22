@@ -19,21 +19,21 @@ namespace ZiminaLear.Controllers
             return Storage.billedaccountStorage.Create(billedaccount);
         }    
         [HttpGet]
-        public Billedaccount Read(Billedaccount billedaccount)
+        public Billedaccount Read(string billedaccountPrice)
         {
-            return Storage.billedaccountStorage.Read(billedaccount.Price);
+            return Storage.billedaccountStorage.Read(billedaccountPrice);
         }
 
         [HttpPut]
-        public Billedaccount Update(Billedaccount billedaccount, Billedaccount newBilledaccount)
+        public Billedaccount Update(string billedaccountPrice, Billedaccount newBilledaccount)
         {    
-            return Storage.billedaccountStorage.Update(billedaccount.Price, newBilledaccount);
+            return Storage.billedaccountStorage.Update(billedaccountPrice, newBilledaccount);
         }
 
         [HttpDelete]
-        public bool Delete(Billedaccount billedaccount)
+        public bool Delete(string billedaccountPrice)
         {
-            return Storage.billedaccountStorage.Delete(billedaccount.Price);
+            return Storage.billedaccountStorage.Delete(billedaccountPrice);
         }
     }
 }

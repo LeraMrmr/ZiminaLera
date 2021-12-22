@@ -13,36 +13,23 @@ namespace ZiminaLear.Repository
             Workers.Add(worker.Id, worker);
             return Workers[worker.Id];
         }
-         public Worker Read(Worker worker)
+         public Worker Read(int workerId)
             {
-                return Workers[worker.Id];
+                return Workers[workerId];
             }
 
-            public Worker Update(Worker worker, Worker newWorker)
+            public Worker Update(int workerId, Worker newWorker)
             {
-                Workers[worker.Id] = newWorker;
-                return Workers[worker.Id];
+                Workers[workerId] = newWorker;
+                return Workers[workerId];
             }
 
-        internal Worker Read(int desId)
-        {
-            throw new NotImplementedException();
-        }
 
-        public bool Delete(Worker worker)
+        public bool Delete(int workerId)
             {
-                return Workers.Remove(worker.Id);
+                return Workers.Remove(workerId);
             }
 
-        internal Worker Update(int desId, Worker newWorker)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal bool Delete(int desId)
-        {
-            throw new NotImplementedException();
-        }
     }
 
    

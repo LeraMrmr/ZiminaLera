@@ -19,21 +19,21 @@ namespace ZiminaLear.Controllers
             return Storage.payStorage.Create(pay);
         }    
         [HttpGet]
-        public Pay Read(Pay pay)
+        public Pay Read(int payId)
         {
-            return Storage.payStorage.Read(pay.Id);
+            return Storage.payStorage.Read(payId);
         }
 
         [HttpPut]
-        public Pay Update(Pay pay, Pay newPay)
+        public Pay Update(int payId, Pay newPay)
         {    
-            return Storage.payStorage.Update(pay.Id, newPay);
+            return Storage.payStorage.Update(payId, newPay);
         }
 
         [HttpDelete]
-        public bool Delete(Pay pay)
+        public bool Delete(int payId)
         {
-            return Storage.payStorage.Delete(pay.Id);
+            return Storage.payStorage.Delete(payId);
         }
     }
 }

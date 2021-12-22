@@ -19,21 +19,21 @@ namespace ZiminaLear.Controllers
             return Storage.planOfWorkStorage.Create(planOfWork);
         }    
         [HttpGet]
-        public PlanOfWork Read(PlanOfWork planOfWork)
+        public PlanOfWork Read(int planOfWorkId)
         {
-            return Storage.planOfWorkStorage.Read(planOfWork.Id);
+            return Storage.planOfWorkStorage.Read(planOfWorkId);
         }
 
         [HttpPut]
-        public PlanOfWork Update(PlanOfWork planOfWork, PlanOfWork newPlanOfWork)
+        public PlanOfWork Update(int planOfWorkId, PlanOfWork newPlanOfWork)
         {
-            return Storage.planOfWorkStorage.Update(planOfWork.Id, newPlanOfWork);
+            return Storage.planOfWorkStorage.Update(planOfWorkId, newPlanOfWork);
         }
 
         [HttpDelete]
-        public bool Delete(PlanOfWork planOfWork)
+        public bool Delete(int planOfWorkId)
         {
-            return Storage.planOfWorkStorage.Delete(planOfWork.Id);
+            return Storage.planOfWorkStorage.Delete(planOfWorkId);
         }
     }
 }
