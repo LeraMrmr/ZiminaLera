@@ -1,4 +1,4 @@
-# _Отделочная_ компания
+# _Отделочная_компания_
 ## Содержание  
  [Введение](#introduction)  
  [1 Описание предметной области](#domainDescription) 
@@ -66,22 +66,22 @@
 
 ![Снимок экрана 2021-12-16 в 8 38 24](https://user-images.githubusercontent.com/91217659/146314488-fc0894bc-a2fb-485d-b971-546bc4182097.png)
 
-Рисунок 1 - Use-case diagram
+<p align="center">Рисунок 1 - Use-case diagram
 
 На основе use-case диаграммы происходит разработка диаграммы потока данных (Data Flow Diagram), на которой показаны потоки данных(см. рисунок 2 и рисунок 3).
 ![Снимок экрана 2021-12-16 в 8 44 05](https://user-images.githubusercontent.com/91217659/146315091-1237edaa-7f30-4998-9d5f-a40a014b9933.png)
 
-Рисунок 2 - Data Flow Diagram
+<p align="center">Рисунок 2 - Data Flow Diagram
 
 ![Снимок экрана 2021-12-16 в 8 43 40](https://user-images.githubusercontent.com/91217659/146315147-1231d4f7-1c51-4035-9f42-4d91a617f029.png)
 
-Рисунок 3 - Data Flow Diagram
+<p align="center">Рисунок 3 - Data Flow Diagram
 
 Далее создаем диаграмму Сущность-Связь (Entity-Relationship diagram)(см. рисунок 4), где отображаются хранилища и связи между ними.
 
 ![Снимок экрана 2021-12-16 в 8 48 07](https://user-images.githubusercontent.com/91217659/146315497-ed14a804-26bd-4cbc-80c9-c74f00c0bd96.png)
 
-Рисунок 4 - Entity-Relationship diagram
+<p align="center">Рисунок 4 - Entity-Relationship diagram
 
 <a name="designing"/>
 
@@ -143,13 +143,13 @@
 
 ![image](https://user-images.githubusercontent.com/91217659/147104412-7556dfb1-effa-46c7-9d7c-005447622f35.png)
 
-Рисунок 5 - Список созданных классов
+<p align="center">Рисунок 5 - Список созданных классов
 
 Затем для каждой сущности создаём хранилище (см. рисунок 6).
 
 ![image](https://user-images.githubusercontent.com/91217659/147105783-0418a28b-3624-4764-8f2c-fe370aa789e0.png)
 
-Рисунок 6 - Все хранилища
+<p align="center">Рисунок 6 - Все хранилища
 
 На примере рассмотрим хранилище класса "Дизайнер".
 
@@ -263,7 +263,7 @@
 
 ![image](https://user-images.githubusercontent.com/91217659/147105372-2bb4d9b5-f8a0-4843-b306-d8a631ec9779.png)
 
-Рисунок 7 - Список контроллеров для всех сущностей
+<p align="center">Рисунок 7 - Список контроллеров для всех сущностей
 
 
 <a name="realization"/>
@@ -273,7 +273,7 @@
 
 ![image](https://user-images.githubusercontent.com/91217659/147130171-2206d838-fef0-4fdf-9007-576d8218f465.png)
 
-Рисунок 8 - Список сущностей 
+<p align="center">Рисунок 8 - Список сущностей 
 
 Рассмотрим работу методов CRUD на примере сущности "Дизайнер".
 
@@ -281,48 +281,48 @@
 
 ![image](https://user-images.githubusercontent.com/91217659/147130613-ada5e368-d7ba-4550-80f7-783f2a2b95b9.png)
 
-Рисунок 9 - Заполнение полей в методе Create 
+<p align="center">Рисунок 9 - Заполнение полей в методе Create 
 
 ![image](https://user-images.githubusercontent.com/91217659/147130685-40701bcb-3048-4a2f-abe5-3536dc39ac58.png)
 
-Рисунок 10 - Результат выполнения в методе Create 
+<p align="center">Рисунок 10 - Результат выполнения в методе Create 
 
 2. Read - функция чтения, позволяющая извлекать и считывать значения записей (см. рисунок 11 и рисунок 12).
 
 ![image](https://user-images.githubusercontent.com/91217659/147131031-e641e78a-a76f-4021-b6cb-6797d8b36ec1.png)
 
-Рисунок 11 - Окно метода Create
+<p align="center">Рисунок 11 - Окно метода Create
 
 ![image](https://user-images.githubusercontent.com/91217659/147131084-2041dd56-59bf-4f94-af91-6a3f51cb3a6f.png)
 
-Рисунок 12 - Результат выполнения метода Read
+<p align="center">Рисунок 12 - Результат выполнения метода Read
 
 3. Update - функция, нужная для изменения существующих записей (см. рисунок 13 и рисунок 14).
 
 ![image](https://user-images.githubusercontent.com/91217659/147131292-5fd0f597-8f21-4e3a-8b7c-ca6771f465e1.png)
 
-Рисунок 13 - Окно метода Update
+<p align="center">Рисунок 13 - Окно метода Update
 
 ![image](https://user-images.githubusercontent.com/91217659/147131351-1eeb531f-49c5-408f-8e50-e69a60b48bf0.png)
 
-Рисунок 14 - Результат выполнения метода Update
+<p align="center">Рисунок 14 - Результат выполнения метода Update
 
 4. Delete - функция, необходимая для удаления записей. Если операция удаления сработает успешно, то ответ сервера будет "true", иначе "false" (см.рисунок 15 и рисунок 16).
 
 ![image](https://user-images.githubusercontent.com/91217659/147131581-15715cd4-c618-495f-9bde-637e1904581f.png)
 
 
-Рисунок 15 - Окно метода Delete
+<p align="center">Рисунок 15 - Окно метода Delete
 
 ![image](https://user-images.githubusercontent.com/91217659/147131617-672588b5-da41-4146-bcef-1c60268a9b1c.png)
 
-Рисунок 16 - Результат выполнения метода Delete
+<p align="center">Рисунок 16 - Результат выполнения метода Delete
 
 Проверим с помощью функции Read информацию о меню. Программа выдает ошибку, что означает, что информации о дизайнере по его Id была удалена и ее невозможно найти (см.рисунок 17).
 
 ![image](https://user-images.githubusercontent.com/91217659/147131749-25643ffc-163d-4c00-aff0-410a2eaf0ccb.png)
 
-Рисунок 17 - проверка удаления через метод Read 
+<p align="center">Рисунок 17 - проверка удаления через метод Read 
 
 <a name="test"/>
 
