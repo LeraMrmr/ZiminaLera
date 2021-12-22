@@ -24,7 +24,7 @@ namespace ZiminaLear.Controllers
             return Storage.designerStorage.Read(designerId);
         }
 
-        [HttpPut]
+        [HttpPost]
         public Designer Update(int designerId, Designer newDesigner)
         {
             return Storage.designerStorage.Update(designerId, newDesigner);

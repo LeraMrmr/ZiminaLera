@@ -24,7 +24,7 @@ namespace ZiminaLear.Controllers
             return Storage.billedaccountStorage.Read(billedaccountPrice);
         }
 
-        [HttpPut]
+        [HttpPost]
         public Billedaccount Update(string billedaccountPrice, Billedaccount newBilledaccount)
         {    
             return Storage.billedaccountStorage.Update(billedaccountPrice, newBilledaccount);

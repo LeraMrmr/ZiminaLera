@@ -24,7 +24,7 @@ namespace ZiminaLear.Controllers
             return Storage.payStorage.Read(payId);
         }
 
-        [HttpPut]
+        [HttpPost]
         public Pay Update(int payId, Pay newPay)
         {    
             return Storage.payStorage.Update(payId, newPay);

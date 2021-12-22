@@ -24,7 +24,7 @@ namespace ZiminaLear.Controllers
             return Storage.workerStorage.Read(workerId);
         }
 
-        [HttpPut]
+        [HttpPost]
         public Worker Update(int workerId, Worker newWorker)
         {
             return Storage.workerStorage.Update(workerId, newWorker);

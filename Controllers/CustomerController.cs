@@ -24,7 +24,7 @@ namespace ZiminaLear.Controllers
             return Storage.customerStorage.Read(customerId);
         }
 
-        [HttpPut]
+        [HttpPost]
         public Customer Update(int customerId, Customer newCustomer)
         {
             return Storage.customerStorage.Update(customerId, newCustomer);

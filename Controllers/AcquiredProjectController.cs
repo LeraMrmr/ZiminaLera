@@ -13,7 +13,7 @@ namespace ZiminaLear.Controllers
     [Route("[controller]")]
     public class AcquiredProjectController : ControllerBase
     {    
-        [HttpPost]
+        [HttpPut]
         public AcquiredProject Create(AcquiredProject acquiredProject)
         {
             return Storage.acquiredProjectStorage.Create(acquiredProject);
@@ -24,7 +24,7 @@ namespace ZiminaLear.Controllers
             return Storage.acquiredProjectStorage.Read(acquiredProjectId);
         }
 
-        [HttpPut]
+        [HttpPost]
         public AcquiredProject Update(int acquiredProjectId, AcquiredProject newAcqiredProject)
         {
             return Storage.acquiredProjectStorage.Update(acquiredProjectId, newAcqiredProject);

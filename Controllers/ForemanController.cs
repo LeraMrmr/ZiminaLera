@@ -24,7 +24,7 @@ namespace ZiminaLear.Controllers
             return Storage.foremanStorage.Read(foremanId);
         }
 
-        [HttpPut]
+        [HttpPost]
         public Foreman Update(int foremanId, Foreman newForeman)
         {
             return Storage.foremanStorage.Update(foremanId, newForeman);

@@ -24,7 +24,7 @@ namespace ZiminaLear.Controllers
             return Storage.planOfWorkStorage.Read(planOfWorkId);
         }
 
-        [HttpPut]
+        [HttpPost]
         public PlanOfWork Update(int planOfWorkId, PlanOfWork newPlanOfWork)
         {
             return Storage.planOfWorkStorage.Update(planOfWorkId, newPlanOfWork);

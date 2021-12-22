@@ -24,7 +24,7 @@ namespace ZiminaLear.Controllers
             return Storage.projectStorage.Read(projectId);
         }
 
-        [HttpPut]
+        [HttpPost]
         public Project Update(int projectId, Project newProject)
         {
             return Storage.projectStorage.Update(projectId, newProject);
