@@ -1,21 +1,21 @@
 # _Отделочная_ компания
 ## Содержание  
  [Введение](#introduction)  
- [1. Описание предметной области](#domainDescription) 
+ [1 Описание предметной области](#domainDescription) 
  
  [1.1 Проблематика](#problematic) 
  
  [1.2 Цели и задачи](#goals) 
  
- [2. Сравнительный анализ существующих прогарммных решений](#existingSoftware)  
+ [2 Сравнительный анализ существующих прогарммных решений](#existingSoftware)  
 
- [3. Разработка системы](#development)
+ [3 Разработка системы](#development)
  
  [3.1 Этап проектирования](#designing)
  
  [3.2 Этап реализации](#realization)
  
- [4. Проверка и тестирование программы](#test)
+ [4 Проверка и тестирование программы](#test)
  
  [Заключение](#conclusion)
  
@@ -30,7 +30,7 @@
  
  <a name="domainDescription"/>
 
- ## 1. Описание предметной области
+ ## 1 Описание предметной области
  Выбранная предметная область - личный кабинет отделочной компании. Информационная система в данной предметной области включает в себя следующие разделы: «Прораб», «Заказчик», «Рабочий» и «Дизайнер». У каждого свои функции и задачи: 1) «Прораб» общается с заказчиком, предлагает ему проекты из базы данных «проекты» (разработанные дизайнером), если заказчик одобряет проект, то прораб начинает составлять план работы и заносит его в базу данных «план работы», далее он следит за качеством выполнения работы и, если она выполнена, то получает оплату проекта, которая заносится в базу «расчётный счёт», откуда затем выплачивается заработная плата. 2) «Рабочий» выполняет выданный ему из базы план работы и за это получает зарплату. 3) «Дизайнер» разрабатывает дизайн-проект, который заносится в соответствующую базу и передаётся прорабу, за эти проекты он получает зарплату из соответствующей базы данных. 4) «Заказчик» выбирает понравившийся из предложенных проектов, приобретает его и после завершения работы оплачивает её.  
  
  
@@ -51,12 +51,12 @@
 
  <a name="goals"/>
 
- ## 2. Сравнительный анализ существующих программных решений
+ ## 2 Сравнительный анализ существующих программных решений
 Существуют многочисленные аналогичные личные кабинеты организаций, которыми пользуются уже годами. Но в нашем регионе таких компаний единицы. При поиске в интернете одним из первых высвечивается сайт 62otdelka.ru[1] с довольно приятным интерфейсом и работающий с 2006 года. В подборке сайтов с таким назначением оценки пользователей в среднем не превышают 3,5 баллов из 5. Но основываясь на самых высоко оценённых, необходимо, чтобы в веб-приложении был простой интерфейс, гарантии качества, подсказки, видео и фото материалы. Если же рассмотривать всю Россию,по запросу самых качественных сайтов нашей тематики можно найти сочинское монтажное предприятие[2], сайт которого действительно впечатляющий, адаптивный и имеющий уникальный дизайн с фоновыми видео и всплывающими кнопками. Вся контактная информация на нём расположена на видном месте и кликабельна, всё максимально удобно и при этом быстро работает. Однако на всех этих сайтах нет личных кабинетов и возможности организации работы, лишь реклама и перечень услуг, поэтому наш проект довольно актуален. 
 
 <a name="existingSoftware"/>
 
-## 3. Разработка системы
+## 3 Разработка системы
 Разработка системы состоит из двух этапов. Первый - это проектирование, в ходе которого определяются цели создания, требования и желаемый результат, также на нём определяют основные источники информации, их надежность и согласованность предоставляемых данных. Вторым этапом является реализация программной части, в ходе которой результаты проектирования превращаются в готовый продукт посредством написания программного обеспечения.
 
 <a name="development"/>
@@ -137,12 +137,133 @@
              }
          }
          }
+Аналогичным образом создаём все классы (см.рисунок 5).
 
+![image](https://user-images.githubusercontent.com/91217659/147104412-7556dfb1-effa-46c7-9d7c-005447622f35.png)
+
+Рисунок 5 - Список созданных классов
+
+Затем для каждой сущности создаём хранилище (см. рисунок 6).
+
+![image](https://user-images.githubusercontent.com/91217659/147105783-0418a28b-3624-4764-8f2c-fe370aa789e0.png)
+
+Рисунок 5 - все хранилища
+
+На примере рассмотрим хранилище класса Designer.
+
+       using System;
+       using System.Collections.Generic;
+       using ZiminaLear.Domain;
+
+       namespace ZiminaLear.Repository
+       {
+           public class DesignerStorage
+           {
+               private Dictionary<int, Designer> Designers = new();
+
+               public Designer Create(Designer designer)
+               {
+                   Designers.Add(designer.Id, designer);
+                   return Designers[designer.Id];
+               }
+               public Designer Read(int designerId)
+               {
+                   return Designers[designerId];
+               }
+
+               public Designer Update(int designerId, Designer newDesigner)
+               {
+                   Designers[designerId] = newDesigner;
+                   return Designers[designerId];
+               }
+
+
+               public bool Delete(int designerId)
+               {
+                   return Designers.Remove(designerId);
+               }
+
+           }
+
+       }
+
+Листинг 3 - хранилище класса Designer.
+
+Следующим шагом создаём общее хранилище.
+
+            namespace ZiminaLear.Repository
+           {
+             public static class Storage
+             {
+                 public static readonly CustomerStorage customerStorage = new();
+                 public static readonly PayStorage payStorage = new();
+                  public static readonly AcquiredProjectStorage acquiredProjectStorage = new();
+                  public static readonly BilledaccountStorage billedaccountStorage = new();
+                 public static readonly DesignerStorage designerStorage = new();
+                 public static readonly WorkerStorage workerStorage = new();
+                 public static readonly ProjectStorage projectStorage = new();
+                 public static readonly ForemanStorage foremanStorage = new();
+                 public static readonly PlanOfWorkStorage planOfWorkStorage = new();
+
+             }
+         }
+         
+Листинг 3 - общее храниище.
+
+Далее разрабатываются web-методы, включающие базовые операции CRUD[3] для каждой из сущностей, отображающих предметную область. Рассмотрим в качестве примера контроллер для класса Designer. 
+
+     using System;
+     using System.Collections.Generic;
+     using System.Linq;
+     using System.Threading.Tasks;
+     using Microsoft.AspNetCore.Mvc;
+     using Microsoft.Extensions.Logging;
+     using ZiminaLear.Domain;
+     using ZiminaLear.Repository;
+
+     namespace ZiminaLear.Controllers
+     {
+         [ApiController]
+         [Route("[controller]")]
+         public class DesignerController : ControllerBase
+         {    
+             [HttpPut]
+             public Designer Create(Designer designer)
+             {
+                 return Storage.designerStorage.Create(designer);
+             }    
+             [HttpGet]
+             public Designer Read(int designerId)
+             {
+                 return Storage.designerStorage.Read(designerId);
+             }
+
+             [HttpPut]
+             public Designer Update(int designerId, Designer newDesigner)
+             {
+                 return Storage.designerStorage.Update(designerId, newDesigner);
+             }
+
+             [HttpDelete]
+             public bool Delete(int designerId)
+             {
+                 return Storage.designerStorage.Delete(designerId);
+             }
+         }
+     }
+
+Листинг 4 - контроллер класса Designer.
+
+Аналогичным образом создаем контроллеры для каждой из сущностей (см.рисунок 6).
+
+![image](https://user-images.githubusercontent.com/91217659/147105372-2bb4d9b5-f8a0-4843-b306-d8a631ec9779.png)
+
+Рисунок 7 - Список контроллеров для всех сущностей
 
 
 <a name="realization"/>
 
-### 4. Проверка и тестирование программы
+### 4 Проверка и тестирование программы
 
 <a name="test"/>
 
@@ -153,5 +274,6 @@
 ## Список использованных источников
 1) https://otdelka62.ru
 2) https://smp-utm.ru
+3) https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
 
 <a name="source"/>
