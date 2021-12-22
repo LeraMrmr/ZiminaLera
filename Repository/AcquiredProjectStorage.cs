@@ -7,41 +7,27 @@ namespace ZiminaLear.Repository
     public class AcquiredProjectStorage
     {
         private Dictionary<int, AcquiredProject> AcquiredProjects = new();
-        
+
         public AcquiredProject Create(AcquiredProject acquiredProject)
         {
             AcquiredProjects.Add(acquiredProject.Id, acquiredProject);
             return AcquiredProjects[acquiredProject.Id];
         }
-         public AcquiredProject Read(AcquiredProject acquiredProject)
-            {
-                return AcquiredProjects[acquiredProject.Id];
-            }
-
-            public AcquiredProject Update(AcquiredProject acquiredProject, AcquiredProject newAcquiredProject)
-            {
-                AcquiredProjects[acquiredProject.Id] = newAcquiredProject;
-                return AcquiredProjects[acquiredProject.Id];
-            }
-
-        internal AcquiredProject Read(int aprojectId)
+        public AcquiredProject Read(int acquiredProjectId)
         {
-            throw new NotImplementedException();
+            return AcquiredProjects[acquiredProjectId];
         }
 
-        public bool Delete(AcquiredProject acquiredProject)
-            {
-                return AcquiredProjects.Remove(acquiredProject.Id);
-            }
-
-        internal AcquiredProject Update(int aprojectId, AcquiredProject newAcquiredProject)
+        public AcquiredProject Update(int acquiredProjectId, AcquiredProject newAcquiredProject)
         {
-            throw new NotImplementedException();
+            AcquiredProjects[acquiredProjectId] = newAcquiredProject;
+            return AcquiredProjects[acquiredProjectId];
         }
 
-        internal bool Delete(int aprojectId)
+        public bool Delete(int acquiredProjectId)
         {
-            throw new NotImplementedException();
+            return AcquiredProjects.Remove(acquiredProjectId);
         }
+
     }
 }

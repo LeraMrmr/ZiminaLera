@@ -13,27 +13,27 @@ namespace ZiminaLear.Controllers
     [Route("[controller]")]
     public class AcquiredProjectController : ControllerBase
     {    
-        [HttpPut]
+        [HttpPost]
         public AcquiredProject Create(AcquiredProject acquiredProject)
         {
             return Storage.acquiredProjectStorage.Create(acquiredProject);
         }    
         [HttpGet]
-        public AcquiredProject Read(AcquiredProject acquiredProject)
+        public AcquiredProject Read(int acquiredProjectId)
         {
-            return Storage.acquiredProjectStorage.Read(acquiredProject.Id);
+            return Storage.acquiredProjectStorage.Read(acquiredProjectId);
         }
 
         [HttpPut]
-        public AcquiredProject Update(AcquiredProject acquiredProject, AcquiredProject newAcqiredProject)
+        public AcquiredProject Update(int acquiredProjectId, AcquiredProject newAcqiredProject)
         {
-            return Storage.acquiredProjectStorage.Update(acquiredProject.Id, newAcqiredProject);
+            return Storage.acquiredProjectStorage.Update(acquiredProjectId, newAcqiredProject);
         }
-
+      
         [HttpDelete]
-        public bool Delete(AcquiredProject acquiredProject)
+        public bool Delete(int acquiredProjectId)
         {
-            return Storage.acquiredProjectStorage.Delete(acquiredProject.Id);
+            return Storage.acquiredProjectStorage.Delete(acquiredProjectId);
         }
     }
 }
