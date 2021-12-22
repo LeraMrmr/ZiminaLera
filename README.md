@@ -141,14 +141,15 @@
          }
          }
 Аналогичным образом создаём все классы (см.рисунок 5).
-
-![image](https://user-images.githubusercontent.com/91217659/147104412-7556dfb1-effa-46c7-9d7c-005447622f35.png)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/91217659/147104412-7556dfb1-effa-46c7-9d7c-005447622f35.png"></p>
 
 <p align="center">Рисунок 5 - Список созданных классов
 
 Затем для каждой сущности создаём хранилище (см. рисунок 6).
 
-![image](https://user-images.githubusercontent.com/91217659/147105783-0418a28b-3624-4764-8f2c-fe370aa789e0.png)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/91217659/147105783-0418a28b-3624-4764-8f2c-fe370aa789e0.png"></p>
 
 <p align="center">Рисунок 6 - Все хранилища
 
