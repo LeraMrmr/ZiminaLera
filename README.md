@@ -141,14 +141,12 @@
 Аналогичным образом создаём все классы (см.рисунок 5).
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91217659/147104412-7556dfb1-effa-46c7-9d7c-005447622f35.png"></p>
-
 <p align="center">Рисунок 5 - Список созданных классов
 
 Затем для каждой сущности создаём хранилище (см. рисунок 6).
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91217659/147105783-0418a28b-3624-4764-8f2c-fe370aa789e0.png"></p>
-
 <p align="center">Рисунок 6 - Все хранилища
 
 На примере рассмотрим хранилище класса "Дизайнер".
@@ -263,7 +261,6 @@
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91217659/147105372-2bb4d9b5-f8a0-4843-b306-d8a631ec9779.png"></p>
-
 <p align="center">Рисунок 7 - Список контроллеров для всех сущностей
 
 
@@ -274,7 +271,6 @@
  
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91217659/147130171-2206d838-fef0-4fdf-9007-576d8218f465.png"></p>
-
 <p align="center">Рисунок 8 - Список сущностей 
 
 Рассмотрим работу методов CRUD на примере сущности "Дизайнер".
@@ -283,56 +279,46 @@
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91217659/147130613-ada5e368-d7ba-4550-80f7-783f2a2b95b9.png"></p>
-
 <p align="center">Рисунок 9 - Заполнение полей в методе Create 
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91217659/147130685-40701bcb-3048-4a2f-abe5-3536dc39ac58.png"></p>
-
 <p align="center">Рисунок 10 - Результат выполнения в методе Create 
 
 2. Read - функция чтения, позволяющая извлекать и считывать значения записей (см. рисунок 11 и рисунок 12).
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91217659/147131031-e641e78a-a76f-4021-b6cb-6797d8b36ec1.png"></p>
-
 <p align="center">Рисунок 11 - Окно метода Create
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91217659/147131084-2041dd56-59bf-4f94-af91-6a3f51cb3a6f.png"></p>
-
 <p align="center">Рисунок 12 - Результат выполнения метода Read
 
 3. Update - функция, нужная для изменения существующих записей (см. рисунок 13 и рисунок 14).
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91217659/147131292-5fd0f597-8f21-4e3a-8b7c-ca6771f465e1.png"></p>
-
 <p align="center">Рисунок 13 - Окно метода Update
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91217659/147131351-1eeb531f-49c5-408f-8e50-e69a60b48bf0.png"></p>
-
 <p align="center">Рисунок 14 - Результат выполнения метода Update
 
 4. Delete - функция, необходимая для удаления записей. Если операция удаления сработает успешно, то ответ сервера будет "true", иначе "false" (см.рисунок 15 и рисунок 16).
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91217659/147131581-15715cd4-c618-495f-9bde-637e1904581f.png"></p>
-
-
 <p align="center">Рисунок 15 - Окно метода Delete
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91217659/147131617-672588b5-da41-4146-bcef-1c60268a9b1c.png"></p>
-
 <p align="center">Рисунок 16 - Результат выполнения метода Delete
 
 Проверим с помощью функции Read информацию о меню. Программа выдает ошибку, что означает, что информации о дизайнере по его Id была удалена и ее невозможно найти (см.рисунок 17).
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91217659/147131749-25643ffc-163d-4c00-aff0-410a2eaf0ccb.png"></p>
-
 <p align="center">Рисунок 17 - проверка удаления через метод Read 
 
 <a name="test"/>
