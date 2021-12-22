@@ -63,25 +63,23 @@
 
 ### 3.1 Этап проектирования
 Разработка начинается с проектирования диаграммы вариантов использования (use-case diagram)(см. рисунок 1), где отражаются главные действующие лица данной системы: прораб, дизайнер, рабочий и заказчик.
+
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91217659/146314488-fc0894bc-a2fb-485d-b971-546bc4182097.png"></p>
-
 <p align="center">Рисунок 1 - Use-case diagram
 
 На основе use-case диаграммы происходит разработка диаграммы потока данных (Data Flow Diagram), на которой показаны потоки данных(см. рисунок 2 и рисунок 3).
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91217659/146315091-1237edaa-7f30-4998-9d5f-a40a014b9933.png"></p>
-
 <p align="center">Рисунок 2 - Data Flow Diagram
+ 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91217659/146315147-1231d4f7-1c51-4035-9f42-4d91a617f029.png"></p>
-
 <p align="center">Рисунок 3 - Data Flow Diagram
 
 Далее создаем диаграмму Сущность-Связь (Entity-Relationship diagram)(см. рисунок 4), где отображаются хранилища и связи между ними.
 <p align="center">
 <img src="https://user-images.githubusercontent.com/91217659/146315497-ed14a804-26bd-4cbc-80c9-c74f00c0bd96.png"></p>
-
 <p align="center">Рисунок 4 - Entity-Relationship diagram
 
 <a name="designing"/>
